@@ -1,6 +1,11 @@
 public class DersIstatistik {
     int notAA;
     int notBA;
+    int notBB;
+    int notBC;
+    int notCC;
+    int notDD;
+    int toplamOgrenciSayisi;
 
     void setNotAA(int notAA) {
         this.notAA = notAA;
@@ -8,6 +13,26 @@ public class DersIstatistik {
 
     void setNotBA(int notBA) {
         this.notBA = notBA;
+    }
+
+    void setNotBB(int notBB) {
+        this.notBB = notBB;
+    }
+
+    void setNotCB(int notCB) {
+        this.notCB = notCB;
+    }
+
+    void setNotCC(int notCC) {
+        this.notCC = notCC;
+    }
+
+    void setNotDC(int notDC) {
+        this.notDC = notDC;
+    }
+
+    void setNotDD(int notDD) {
+        this.notDD = notDD;
     }
 
     int getNotAA() {
