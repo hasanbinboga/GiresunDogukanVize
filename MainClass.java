@@ -1,10 +1,41 @@
+import java.util.Scanner;
+
 /**
  * MainClass
  */
 public class MainClass {
 
   public static void main(String[] args) {
-    System.out.println(
-        "initial Kodu güncelledin. Günceeleme 2 şimdi bunu gite göndereceksin. Bunun için dosyayı kaydediyoruz. Sonra sol tarafta üçüncü sıradaki menü seçeneği ile değişiklikleri görüyoruz veya githug desktop üzerinden gönderebiliyoruz. ");
+    Scanner sc = new Scanner(System.in);
+    DersIstatistik dersIstatistik = new DersIstatistik(10, 10, 0, 0, 0, 0, 0, 0);
+    dersIstatistik.baslikYazdir();
+    dersIstatistik.menuYazdir();
+    int seciliIslem = 0;
+
+    do {
+      System.out.println("İşlem seçiniz: ");
+      seciliIslem = sc.nextInt();
+      System.out.println("--------------------");
+      if (seciliIslem > 5) {
+        System.out.println("UYARI: İşlem yapabilmek için 1 ile 5 arasında bir sayı seçilmelidir!\n");
+        System.out.println("Devam etmek için bir tuşa ve sonrasında ENTER tuşuna basınız:");
+        sc.next();
+      } else {
+        switch (seciliIslem) {
+          case 1:
+            dersIstatistik.notSayisiGir(dersIstatistik);
+            break;
+          case 2:
+            dersIstatistik.metinselIstatistikYazdir(dersIstatistik);
+            break;
+          case 3:
+            dersIstatistik.grafikselIstatistikYazdir(dersIstatistik);
+            break;
+          case 4:
+            dersIstatistik.veriSifirla(dersIstatistik);
+            break;
+        }
+      }
+    } while (seciliIslem != 5);
   }
 }
