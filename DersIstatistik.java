@@ -3,6 +3,7 @@ public class DersIstatistik {
     int notBA;
     int notBB;
     int notBC;
+    int notCB;
     int notCC;
     int notDD;
     int toplamOgrenciSayisi;
@@ -35,6 +36,10 @@ public class DersIstatistik {
         this.notDD = notDD;
     }
 
+    void setToplamOgrenciSayisi(DersIstatistik ders) {
+        this.toplamOgrenciSayisi = ders.notAA + ders.notBA;
+    }
+
     int getNotAA() {
         return this.notAA;
     }
@@ -43,16 +48,28 @@ public class DersIstatistik {
         return this.notBA;
     }
 
-    void baslikYazdir() {
+    int getToplamOgrenciSayisi(){
+        return this.toplamOgrenciSayisi;
+    }
 
+    void baslikYazdir() {
+        System.out.println("****************************************");
+        System.out.println("*** DERS NOTLARI İSTATİSTİK PROGRAMI ***");
+        System.out.println("****************************************");
     }
 
     void menuYazdir() {
-
+        System.out.println("MENÜ:");
+        System.out.println("(1) Her bir harfli başarı notu için öğrenci sayısı gir");
+        System.out.println("(2) Metinsel istatistik yazdır");
+        System.out.println("(3) Grafiksel istatistik yazdır");
+        System.out.println("(4) Tüm verileri sıfırla");
+        System.out.println("(5) Programı sonlandır");
     }
 
     void notSayisiGir(DersIstatistik ders) {
-
+        System.out.println("AA alan öğrenci sayısını giriniz: ");
+        
     }
 
     void metinselIstatistikYazdir(DersIstatistik ders) {
