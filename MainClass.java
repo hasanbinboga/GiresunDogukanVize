@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 /**
- * MainClass
+ * Öğrenci No: 220706052
+ * Adı Soyadı: Doğukan Önder
  */
 public class MainClass {
 

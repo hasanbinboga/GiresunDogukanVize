@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/**
+ * Öğrenci No: 220706052
+ * Adı Soyadı: Doğukan Önder
+ */
 public class DersIstatistik {
     int notAA;
     int notBA;
